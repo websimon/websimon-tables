@@ -19,7 +19,7 @@
 	}
 	
 	//dynamic css
-	require_once( 'table_skins.php' ); 
+	include( 'table_skins.php' ); 
 	$table .= '<style>' . $css . '</style>';
 	
 	$design_elements = explode(';', $design);

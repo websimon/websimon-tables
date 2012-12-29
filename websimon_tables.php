@@ -36,9 +36,9 @@ function websimon_tables_shortcode ($atts)
 	extract(shortcode_atts(array(
 		'id' => 'The correct attribute is missing'
 	), $atts));
-	
-	require_once( 'php/shortcode.php' );
-	
+		
+	include( 'php/shortcode.php' );
+		
 	return do_shortcode($table);
 }
 
