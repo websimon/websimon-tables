@@ -84,29 +84,29 @@ echo '
 	
 		echo '<th>Column ' . $col_counter . '
 		<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=new_col_left&before=' . $col_counter . '&_wpnonce=' . $organize_nonce . '">
-			<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/insert_column.png" title="insert column to the left" style="float:left;margin: 0 10px 0 0"/>
+			<img src="' . content_url() .'plugins/websimon-tables/images/insert_column.png" title="insert column to the left" style="float:left;margin: 0 10px 0 0"/>
 		</a>';
 		if ($numcol > 1) {
 			echo '
 			<a onclick="return wsValidateDelCol()" href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=delete_col&column=' . $col_counter . '&_wpnonce=' . $organize_nonce . '">
-				<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/delete_column.png" title="delete column" style="float:left;margin: 0 10px 0 0"/>
+				<img src="' . content_url() .'plugins/websimon-tables/images/delete_column.png" title="delete column" style="float:left;margin: 0 10px 0 0"/>
 			</a>';
 		}
 		if ($col_counter != 1) {
 			echo '
 			<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=move_col_left&column=' . $col_counter . '&_wpnonce=' . $organize_nonce . '">
-				<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/move_col_left.png" title="Move column one step left" style="float:left;margin: 0 10px 0 0"/>
+				<img src="' . content_url() .'plugins/websimon-tables/images/move_col_left.png" title="Move column one step left" style="float:left;margin: 0 10px 0 0"/>
 			</a>';
 		}
 		if ($col_counter != $numcol) {
 			echo '
 			<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=move_col_right&column=' . $col_counter . '&_wpnonce=' . $organize_nonce . '">
-				<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/move_col_right.png" title="Move column one step right" style="float:left;margin: 0 10px 0 0"/>
+				<img src="' . content_url() .'plugins/websimon-tables/images/move_col_right.png" title="Move column one step right" style="float:left;margin: 0 10px 0 0"/>
 			</a>';
 		}
 		if ($col_counter == $numcol) {
 			echo '<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=new_col_last&after=' . $col_counter . '&_wpnonce=' . $organize_nonce . '">
-				<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/insert_column_right.png" title="insert column to the right" style="float:right;margin: 0 10px 0 0"/>
+				<img src="' . content_url() .'plugins/websimon-tables/images/insert_column_right.png" title="insert column to the right" style="float:right;margin: 0 10px 0 0"/>
 			</a>';
 		}
 		
@@ -129,7 +129,7 @@ echo '
 $thead_content = explode('[-|-]' , $headlines); //explode headlines
 echo '<tr class="table-header"><td class="table-row-explan">Table Headlines<br />
 	<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=new_row_top&_wpnonce=' . $organize_nonce . '">
-		<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/new_row.png" title="insert row below" />
+		<img src="' . content_url() .'plugins/websimon-tables/images/new_row.png" title="insert row below" />
 	</a></td>';
 	while ($col_counter <= $numcol) { 
 		echo '<td>
@@ -154,27 +154,27 @@ while ($row_counter <= $numrow) {
 		echo '
 		<br />
 		<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=move_row_up&row_number=' . $row_counter . '&_wpnonce=' . $organize_nonce . '">
-			<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/move_row_up.png" title="Move row one step upwards"/>
+			<img src="' . content_url() .'plugins/websimon-tables/images/move_row_up.png" title="Move row one step upwards"/>
 		</a>'; 
 	}
 	if ($row_counter != $numrow) {
 		echo '
 		<br />
 		<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=move_row_down&row_number=' . $row_counter . '&_wpnonce=' . $organize_nonce . '">
-			<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/move_row_down.png" title="Move row one step downwards"/>
+			<img src="' . content_url() .'plugins/websimon-tables/images/move_row_down.png" title="Move row one step downwards"/>
 		</a>';
 	}
 	if ($numrow > 1) {
 		echo '
 		<br />
 		<a onclick="return wsValidateDelRow()" href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=delete_row&row_number=' . $row_counter . '&_wpnonce=' . $organize_nonce . '">
-			<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/delete_row.png" title="delete row"/>
+			<img src="' . content_url() .'plugins/websimon-tables/images/delete_row.png" title="delete row"/>
 		</a>
 		';
 	}
 	echo '<br />
 	<a href="?page=websimon_tables&action=ws_organize_table_content&table_id=' . $this_id . '&organize=new_row&after=' . $row_counter . '&_wpnonce=' . $organize_nonce . '">
-		<img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/websimon-tables/images/new_row.png" title="new row below" />
+		<img src="' . content_url() .'plugins/websimon-tables/images/new_row.png" title="new row below" />
 	</a>
 	';
 	echo '
